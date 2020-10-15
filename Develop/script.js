@@ -5,22 +5,28 @@ var currentMonth = now.month()
 var currentDayOf = now.date()
 var currentHour = now.hour()
 
-//function to display todays date at the top of the page
+var otherDay = moment()
+
+//function to display date at the top of the page
 function setDate(day) {
+    var nextDayButton = $("<i class='fas fa-lg fa-caret-right mx-4 id='goNextDay'></i>")
+        .on('click', nextDay);
+    var prevDayButton = $("<i class='fas fa-lg fa-caret-left mx-4' id='goPrevDay'></i>")
+        .on('click', prevDay)
     $("#currentDay")
-      .text("Date: " + day.format("dddd, MMM Do YYYY"))
-      .append("<i class='fas fa-lg fa-caret-right mx-4'></i>")
-      .prepend("<i class='fas fa-lg fa-caret-left mx-4'></i>");
+      .text(day.format("dddd, MMM Do YYYY"))
+      .append(nextDayButton)
+      .prepend(prevDayButton);
 }
 setDate(now)
 
 //function to generate calendar
-function generateCalendar() {
+function generateCalendar(day) {
+    $('#schedule').empty()
     var hour = 0
-    var thisDay = moment() //will be an input
     while (hour < 24) {
         //create a moment for this hour
-        var thisRowMoment = moment(new Date(thisDay.year(), thisDay.month(), thisDay.date(), hour))
+        var thisRowMoment = moment(new Date(day.year(), day.month(), day.date(), hour))
         //set hour display
         var hourString = ''
         hour > 12 ? hourString = hour-12 + 'PM' : hourString = hour + 'AM'
@@ -49,8 +55,26 @@ function generateCalendar() {
         $('#schedule').append(newRow)
         hour++
     }
-    console.log($(`#hour_${currentHour}`));
-    $(`#hour_${currentHour}`).children('textarea').focus();
+    //focus on the current hour
+    if (day.isSame(now)) {
+        $(`#hour_${currentHour}`).children("textarea").focus();
+    } else {
+        $(`#hour_0`).children("textarea").focus();
+        $(`#hour_0`).children("textarea").blur();
+    }
 }
 
-generateCalendar()
+//event listener to move forward one day
+function nextDay() {
+    otherDay = otherDay.add(1, 'd')
+    generateCalendar(otherDay);
+    setDate(otherDay)
+}
+
+function prevDay() {
+    otherDay = otherDay.subtract(1, 'd')
+    generateCalendar(otherDay);
+    setDate(otherDay)
+}
+
+generateCalendar(now)
