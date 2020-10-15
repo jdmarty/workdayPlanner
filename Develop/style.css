@@ -72,7 +72,7 @@ textarea{
 
 /* Total Schedule */
 #schedule {
-  max-height: 60vh;
+  max-height: 65vh;
   overflow: auto;
 }
 
