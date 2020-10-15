@@ -25,7 +25,7 @@ function generateCalendar() {
         if (hour === 12) hourString = '12PM';
         //set past/present/future
         var timeClass
-        if (thisRowHour.isBefore(now)) timeClass = "past";
+        if (thisRowHour.isBefore(now)) timeClass = 'past';
         if (thisRowHour.isAfter(now)) timeClass = 'future';
         if (thisRowHour.isSame(now, 'hour')) timeClass = 'present'
         //create and append blocks for hour, time and save
@@ -43,8 +43,14 @@ function generateCalendar() {
             .append(newTextArea)
             .append(newSaveButton)
         $('#schedule').append(newRow)
-        //focus on the present
-        $('.present').focus()
+        //scroll to the current hour
+        if (thisRowHour.isSame(now, "hour")) {
+            $("#schedule").animate(
+                { scrollTop: $(`#hour_${currentHour}`).offset().top, },
+                1000
+            );
+        }
+        
         hour++
     }
 }
