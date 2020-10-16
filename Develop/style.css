@@ -11,6 +11,8 @@ textarea{
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+  font-size: 1.2em;
+  overflow: auto;
 }
 
 .jumbotron {
@@ -65,16 +67,9 @@ textarea{
   color: white;
 }
 
-.saveBtn i:hover {
+.saveBtn:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+  color: green;
 }
-
-/* Total Schedule */
-#schedule {
-  max-height: 65vh;
-  overflow: auto;
-}
-
-/* current Day header */
 
