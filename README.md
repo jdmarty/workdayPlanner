@@ -2,7 +2,7 @@
 
 ## Links
 
- - Deployed [https://jdmarty.github.io/codeQuiz/]https://jdmarty.github.io/workdayPlanner/)
+ - Deployed [https://jdmarty.github.io/codeQuiz/](https://jdmarty.github.io/workdayPlanner/)
  - Repository [https://github.com/jdmarty/workdayPlanner](https://github.com/jdmarty/workdayPlanner)
 
 ![Day Planner](https://github.com/jdmarty/workdayPlanner/blob/main/Assets/deployedScreenshot.PNG)
