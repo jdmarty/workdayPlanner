@@ -5,8 +5,14 @@
  - Deployed [https://jdmarty.github.io/codeQuiz/]https://jdmarty.github.io/workdayPlanner/)
  - Repository [https://github.com/jdmarty/workdayPlanner](https://github.com/jdmarty/workdayPlanner)
 
-![Day Planner](https://github.com/jdmarty/scrambledPasswordGenerator/blob/master/Assets/deployed-screenshot.PNG)
+![Day Planner](https://github.com/jdmarty/workdayPlanner/blob/main/Assets/deployedScreenshot.PNG)
 
+## How to use
+ - When this page first loads, it will display the current date and default to focusing on the current hour. Hours are color coded to display past, present or future
+ - Type an event that you want to track for that day in the input field 
+ - Click the save button to the right of the event that you just added to save it to memory
+ - Click the Save All Events button at the top of the screen to save all events currently in the calendar
+ - Click the Clear Today's Events button at the top of the screen to empty out your schedule. 
 -------------------------------------------------------------------
 
 # 05 Third-Party APIs: Work Day Scheduler
