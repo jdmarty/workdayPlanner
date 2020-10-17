@@ -9,7 +9,7 @@
 
 ## How to use
  - When this page first loads, it will display the current date and default to focusing on the current hour. Hours are color coded to display past, present or future
- - Type an event that you want to track for that day in the input field 
+ - Type an event that you want to track for that day in the input field. Events will persist across days (future versions will add functionality to make persistence optional)
  - Click the save button to the right of the event that you just added to save it to memory
  - Click the Save All Events button at the top of the screen to save all events currently in the calendar
  - Click the Clear Today's Events button at the top of the screen to empty out your schedule.
