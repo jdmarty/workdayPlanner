@@ -26,6 +26,7 @@ body {
   border-radius: 15px;
 }
 
+
 /* Hour Blocks */
 .hour {
   background-color: #ffffff;
@@ -87,6 +88,9 @@ textarea{
   cursor: pointer
 }
 
+#schedule {
+  margin: 10px auto;
+}
 
 
 

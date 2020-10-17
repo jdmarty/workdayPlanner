@@ -3,8 +3,6 @@ var now = moment()
 var currentHour = now.hour()
 var targetDay = moment()
 
-//clear storage
-// localStorage.clear();
 
 //start the app
 initialize(now)
@@ -65,7 +63,7 @@ function generateCalendar(day) {
             .on("click", saveEvent);
         //create new row and add the blocks
         var newRow = $('<div>')
-            .addClass('row time-block text-xs-left text-sm-center')
+            .addClass('row time-block')
             .attr('id', `hour_${hour}`)
             .append(newHourBlock)
             .append(newTextArea)
@@ -113,7 +111,7 @@ function saveEvent(e) {
 function saveAll() {
     //run getTodaysEvents to get an array from storage or an empty array
     var thisDaysEvents = getTodaysEvents()
-    //loop across all text areas and change the appropriate indexed value in the array
+    //loop across all text areas and change the appropriate indexed value in the events array
     for (var i = 0; i < $("#schedule").find("textarea").length; i++) {
       thisDaysEvents[i] = $("#schedule").find("textarea")[i].value;
     }
