@@ -1,9 +1,39 @@
+/* General styles for body */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
 
+/* Jumbotron */
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 10px solid black;
+}
+
+/* Time Blocks */
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 1px solid white;;
+}
+
+.time-block{
+  text-align: center;
+  border-radius: 15px;
+}
+
+/* Hour Blocks */
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+}
+
+/* Events Blocks */
 textarea{
   background: transparent;
   border: none;
@@ -15,33 +45,8 @@ textarea{
   overflow: auto;
 }
 
-.jumbotron {
-  text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
-}
-
 .description{
   white-space: pre-wrap;
-}
-
-.time-block{
-  text-align: center;
-  border-radius: 15px;
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
-}
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
 }
 
 .past {
@@ -59,6 +64,7 @@ textarea{
   color: black
 }
 
+/* Save Button */
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -68,9 +74,26 @@ textarea{
 }
 
 .saveBtn:hover {
-  font-size: 20px;
+  font-size: 25px;
   transition: all .3s ease-in-out;
   color: green;
+  cursor: pointer;
 }
+
+/* Navigation buttons */
+#goNextDay:hover, #goPrevDay:hover {
+  transition: all .3s ease-in-out;
+  color: red;
+  cursor: pointer
+}
+
+
+
+
+
+
+
+
+
 
 

@@ -4,37 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <!-- Fontawesome -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <!-- Google fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
   <body>
-    <header class="jumbotron py-1 sticky-top bg-white">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
+    <!-- Header Jumbotron containing h1, p, h5 and two buttons -->
+    <header class="jumbotron px-0 p-sm-1 sticky-top bg-white">
+      <!-- App Title -->
+      <h1 class="display-4">Work Day Scheduler</h1>
+      <!-- Lead -->
+      <p class="lead description">A simple calendar app for scheduling your work day</p>
+      <!-- Header displaying date you are currently scheduling -->
       <h5 id="currentDay"></h5>
+      <!-- Buttons to save/clear all events for the current day? -->
       <button type="button" class="btn btn-primary my-sm-1" id="saveAll">Save All Events</button>
       <button type="button" class="btn btn-primary my-sm-1" id="clearAll">Clear Today's Events</button>
     </header>
-    <div class="container" id="schedule"></div>
+    <!-- Main Section. The calendar will be generated here -->
+    <main class="container" id="schedule"></main>
 
+    <!-- ajax moment -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+    <!-- all jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
