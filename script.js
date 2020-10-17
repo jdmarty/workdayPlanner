@@ -111,7 +111,7 @@ $(document).ready(() => {
     thisDaysEvents[hourIndex] = thisHoursEvent;
     //save the new array to storage
     localStorage.setItem(
-      targetDay.format("MM DD YYYY"),
+      'events',
       JSON.stringify(thisDaysEvents)
     );
   }
@@ -126,7 +126,7 @@ $(document).ready(() => {
     }
     //save the new array to storage
     localStorage.setItem(
-      targetDay.format("MM DD YYYY"),
+      'events',
       JSON.stringify(thisDaysEvents)
     );
   }
@@ -141,7 +141,7 @@ $(document).ready(() => {
     }
     //set the corresponding stored array to an empty array
     localStorage.setItem(
-      targetDay.format("MM DD YYYY"),
+      'events',
       JSON.stringify(createEmptyArray())
     );
   }
@@ -161,7 +161,7 @@ $(document).ready(() => {
   //function to populate the global variable with the target days events
   function getTodaysEvents() {
     var todaysEvents = JSON.parse(
-      localStorage.getItem(targetDay.format("MM DD YYYY"))
+      localStorage.getItem('events')
     );
     return todaysEvents ? todaysEvents : createEmptyArray();
   }
