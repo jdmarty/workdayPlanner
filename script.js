@@ -135,15 +135,15 @@ $(document).ready(() => {
 
   //function to clear all events for a given day
   function clearAll() {
-    //loop across all text areas and change their value to empty strings
-    for (var i = 0; i < $("#schedule").find("textarea").length; i++) {
-      $("#schedule").find("textarea")[i].value = "";
+    var areYouSure = confirm('Are you sure you want to clear your schedule?');
+    if (areYouSure) {
+      //loop across all text areas and change their value to empty strings
+      for (var i = 0; i < $("#schedule").find("textarea").length; i++) {
+        $("#schedule").find("textarea")[i].value = "";
+      }
+      //set the corresponding stored array to an empty array
+      localStorage.setItem("events", JSON.stringify(createEmptyArray()));
     }
-    //set the corresponding stored array to an empty array
-    localStorage.setItem(
-      'events',
-      JSON.stringify(createEmptyArray())
-    );
   }
 
   $("#clearAll").on("click", clearAll);
