@@ -1,3 +1,14 @@
+# Day Planner
+
+## Links
+
+ - Deployed [https://jdmarty.github.io/codeQuiz/]https://jdmarty.github.io/workdayPlanner/)
+ - Repository [https://github.com/jdmarty/workdayPlanner](https://github.com/jdmarty/workdayPlanner)
+
+![Day Planner](https://github.com/jdmarty/scrambledPasswordGenerator/blob/master/Assets/deployed-screenshot.PNG)
+
+-------------------------------------------------------------------
+
 # 05 Third-Party APIs: Work Day Scheduler
 
 ## Your Task

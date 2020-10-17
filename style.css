@@ -77,13 +77,12 @@ textarea{
 .saveBtn:hover {
   font-size: 25px;
   transition: all .3s ease-in-out;
-  color: green;
   cursor: pointer;
+  background-color: #16839c;
 }
 
 /* Navigation buttons */
 #goNextDay:hover, #goPrevDay:hover {
-  transition: all .3s ease-in-out;
   color: red;
   cursor: pointer
 }
